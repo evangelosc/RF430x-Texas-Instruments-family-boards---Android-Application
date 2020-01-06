@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hello_world.MainActivity">
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/increase"
+        android:onClick="increase_func"/>
+
+    <TextView
+        android:id="@+id/Value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/increase"
+        android:layout_below="@+id/Temp_text"
+        android:text="Micro_Value" />
+
+    <TextView
+        android:id="@+id/Byte_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/Intent_button"
+        android:layout_marginBottom="191dp"
+        android:text="Graph_Status" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="NFC tag" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/increase"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="47dp"
+        android:id="@+id/decrease"
+        android:onClick="decrease_func"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="165dp"
+        android:layout_above="@+id/increase"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/Intent_button"
+        android:layout_width="76dp"
+        android:layout_height="42dp"
+        android:layout_alignEnd="@+id/increase"
+        android:layout_below="@+id/increase"
+        android:layout_marginTop="-40dp"
+        android:onClick="intent_function"
+        android:text="Enter" />
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="226dp"
+        android:layout_height="73dp"
+        android:layout_alignEnd="@+id/graph"
+        android:layout_below="@+id/increase"
+        android:layout_marginEnd="-11dp"
+        android:layout_marginTop="-32dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/ADC1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/increase"
+        android:layout_below="@+id/Rt_text"
+        android:text="ADC1:" />
+
+    <TextView
+        android:id="@+id/ADC2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/increase"
+        android:layout_below="@+id/ADC1_text"
+        android:text="ADC2:" />
+
+    <TextView
+        android:id="@+id/ADC0_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/increase"
+        android:layout_below="@+id/ADC2_text"
+        android:text="ADC0:" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/graph"
+        android:layout_below="@+id/textView"
+        android:onClick="Digital_toggle"
+        android:text="Digital out" />
+
+    <TextView
+        android:id="@+id/Rt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/increase"
+        android:layout_below="@+id/Value_text"
+        android:text="Rt:" />
+
+    <TextView
+        android:id="@+id/Temp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/increase"
+        android:layout_marginTop="113dp"
+        android:text="Temp:" />
+
+</RelativeLayout>
